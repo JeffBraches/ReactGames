@@ -1,0 +1,23 @@
+body {
+    font-family: "Arial"
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #424141;
+}
+.gameContainer{
+    text-align: center;
+}
+.gameSelector{
+    text-align: center;
+}
+.actionButton{
+    width: 10%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    font-size: 1vw;
+    margin: 1%;
+    color: #222222;
+}
