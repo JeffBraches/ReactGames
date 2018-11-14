@@ -1,0 +1,74 @@
+body {
+    font-family: "Arial"
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #424141;
+}
+
+.statvalue{
+    padding: 5px;
+    font-size: 20px;
+}
+
+.card{
+    padding: 5px;
+    margin-left: 5px;
+    border: solid 1px black;
+    max-width: 10%;
+}
+
+.hand{
+    text-align: center;
+}
+
+.actionbutton{
+    width: 10%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+    font-size: 2vw;
+    margin: 1%;
+    color: #222222;
+}
+
+.actioncontainer{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 15px;
+}
+
+.gameresults{
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 2vw;
+}
+.statContainer{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+}
+
+.gamestartContainer{
+    text-align: center;
+}
+#hitbutton{
+    background-color: rgb(70, 224, 186);
+}
+
+#staybutton{
+    background-color: rgb(201, 58, 39);
+}
+
+#gamestartbutton{
+    width: 30%;
+    background-color: #0ebe0e
+}
+
+#restartbutton{
+    width: 10%;
+    font-size: 20px;
+    background-color: #0ebe0e
+}
