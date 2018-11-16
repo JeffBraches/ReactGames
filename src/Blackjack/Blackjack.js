@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./Blackjack.css";
 import GameContainer from "./GameContainer";
-import Stats from "./Stats";
+import Stats from "../Stats";
 class Blackjack extends Component {
   constructor(props) {
     super(props);
 
-    if (!localStorage){
+    if (!localStorage) {
       localStorage.blackjackWins = 0;
       localStorage.blackjackLosses = 0;
       localStorage.blackjackPushes = 0;
@@ -17,7 +17,7 @@ class Blackjack extends Component {
         numLosses: 0,
         numPushes: 0
       };
-    } else{
+    } else {
       this.state = {
         gameState: 0,
         gameResult: null,
@@ -26,35 +26,43 @@ class Blackjack extends Component {
         numPushes: parseInt(localStorage.blackjackPushes)
       };
     }
-    
 
     this.setGameState = this.setGameState.bind(this);
     this.updateStats = this.updateStats.bind(this);
+    this.handleScoreReset = this.handleScoreReset.bind(this);
   }
 
   setGameState(nextState) {
-    this.setState(nextState)
+    this.setState(nextState);
   }
 
+  handleScoreReset() {
+    localStorage.blackjackWins = 0;
+    localStorage.blackjackLosses = 0;
+    localStorage.blackjackPushes = 0;
+    this.setState({
+      numWins: 0,
+      numLosses: 0,
+      numPushes: 0
+    })
+  }
   //0 = loss, 1 = win, 2 = push
   updateStats(result) {
     if (result === 0) {
       this.setState({
-        numLosses: this.state.numLosses+1
+        numLosses: this.state.numLosses + 1
       });
       localStorage.blackjackLosses = parseInt(localStorage.blackjackLosses) + 1;
     } else if (result === 1) {
       this.setState({
-        numWins: this.state.numWins+1
+        numWins: this.state.numWins + 1
       });
       localStorage.blackjackWins = parseInt(localStorage.blackjackWins) + 1;
-
     } else {
       this.setState({
-        numPushes: this.state.numPushes+1
+        numPushes: this.state.numPushes + 1
       });
       localStorage.blackjackPushes = parseInt(localStorage.blackjackPushes) + 1;
-
     }
   }
 
@@ -64,9 +72,13 @@ class Blackjack extends Component {
         <h1 className="title">ReactJack</h1>
         <Stats
           game="Blackjack"
-          numWins={this.state.numWins}
-          numLosses={this.state.numLosses}
-          numPushes={this.state.numPushes}
+          aLabel="Wins: "
+          aValue={this.state.numWins}
+          bLabel="Losses: "
+          bValue={this.state.numLosses}
+          cLabel="Pushes: "
+          cValue={this.state.numPushes}
+          handleScoreReset = {this.handleScoreReset}
         />
         <GameContainer
           setGameState={this.setGameState}

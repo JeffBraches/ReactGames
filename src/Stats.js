@@ -5,9 +5,10 @@ class Stats extends Component {
     return (
       <div className="statContainer">
           <h3>Game: {this.props.game}</h3>
-         <span className="statvalue">Wins: {this.props.numWins}</span>
-         <span className="statvalue">Losses: {this.props.numLosses}</span>
-         <span className="statvalue">Pushes: {this.props.numPushes}</span>
+         <span className="statvalue">{this.props.aLabel} {this.props.aValue}</span>
+         <span className="statvalue">{this.props.bLabel} {this.props.bValue}</span>
+         <span className="statvalue">{this.props.cLabel} {this.props.cValue}</span> <br />
+         <button onClick={this.props.handleScoreReset}>Reset Stats</button>
       </div>
     );
   }

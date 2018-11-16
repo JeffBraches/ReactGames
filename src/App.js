@@ -28,7 +28,7 @@ class App extends Component {
   render() {
     return (
       <div>
-          <h1>React Games</h1>
+        {this.state.game === "" ? <h1>React Games</h1> : null }
         <div className="gameSelector">
           <button onClick={this.blackjackSelect} className="actionButton">Blackjack</button>
           <button onClick={this.tictactoeSelect} className="actionButton">TicTacToe</button>
