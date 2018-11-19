@@ -161,7 +161,7 @@ class GameContainer extends Component {
                 gameState: 2
             })
             this.props.updateStats(0);
-        } else if (dealerHandValue == playerHandValue){
+        } else if (dealerHandValue === playerHandValue){
             //push
             this.setState({
                 result: "Push - Dealer has "+dealerHandValue+" and player has "+playerHandValue,

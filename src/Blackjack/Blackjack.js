@@ -21,9 +21,9 @@ class Blackjack extends Component {
       this.state = {
         gameState: 0,
         gameResult: null,
-        numWins: parseInt(localStorage.blackjackWins),
-        numLosses: parseInt(localStorage.blackjackLosses),
-        numPushes: parseInt(localStorage.blackjackPushes)
+        numWins: parseInt(localStorage.blackjackWins, 10),
+        numLosses: parseInt(localStorage.blackjackLosses, 10),
+        numPushes: parseInt(localStorage.blackjackPushes, 10)
       };
     }
 
@@ -52,17 +52,17 @@ class Blackjack extends Component {
       this.setState({
         numLosses: this.state.numLosses + 1
       });
-      localStorage.blackjackLosses = parseInt(localStorage.blackjackLosses) + 1;
+      localStorage.blackjackLosses = parseInt(localStorage.blackjackLosses, 10) + 1;
     } else if (result === 1) {
       this.setState({
         numWins: this.state.numWins + 1
       });
-      localStorage.blackjackWins = parseInt(localStorage.blackjackWins) + 1;
+      localStorage.blackjackWins = parseInt(localStorage.blackjackWins, 10) + 1;
     } else {
       this.setState({
         numPushes: this.state.numPushes + 1
       });
-      localStorage.blackjackPushes = parseInt(localStorage.blackjackPushes) + 1;
+      localStorage.blackjackPushes = parseInt(localStorage.blackjackPushes, 10) + 1;
     }
   }
 

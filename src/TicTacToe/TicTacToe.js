@@ -37,17 +37,17 @@ class TicTacToe extends Component {
       this.setState({
         numOWins: this.state.numOWins+1
       })
-      localStorage.tictactoeOWins = parseInt(localStorage.tictactoeOWins) + 1;
+      localStorage.tictactoeOWins = parseInt(localStorage.tictactoeOWins, 10) + 1;
     } else if (result === 1) {
       this.setState({
         numXWins: this.state.numXWins+1
       });
-      localStorage.tictactoeXWins = parseInt(localStorage.tictactoeXWins) + 1;
+      localStorage.tictactoeXWins = parseInt(localStorage.tictactoeXWins, 10) + 1;
     } else {
       this.setState({
-        numPushes: this.state.numTies+1
+        numTies: this.state.numTies+1
       });
-      localStorage.tictactoeTies = parseInt(localStorage.tictactoeTies) + 1;
+      localStorage.tictactoeTies = parseInt(localStorage.tictactoeTies, 10) + 1;
     }
   }
 
@@ -56,9 +56,12 @@ class TicTacToe extends Component {
       <div className="TicTacToe">
         <Stats
           game="TicTacToe"
-          numWins={this.state.numWins}
-          numLosses={this.state.numLosses}
-          numTies={this.state.numTies}
+          aLabel="O Wins: "
+          aValue={this.state.numOWins}
+          bLabel="X Wins: "
+          bValue={this.state.numXWins}
+          cLabel="Ties: "
+          cValue={this.state.numTies}
         />
         <h1>This isn't implemented yet</h1>
       </div>
