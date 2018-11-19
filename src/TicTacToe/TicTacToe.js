@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Stats from "../Stats"
+import GameContainer from "./GameContainer"
 import "./TicTacToe.css";
+
 class TicTacToe extends Component {
   constructor(props) {
     super(props);
@@ -63,7 +65,7 @@ class TicTacToe extends Component {
           cLabel="Ties: "
           cValue={this.state.numTies}
         />
-        <h1>This isn't implemented yet</h1>
+        <GameContainer />
       </div>
     );
   }
