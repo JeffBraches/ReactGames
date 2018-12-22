@@ -112,7 +112,6 @@ class Card extends Component {
         case 3:
           cardUrl = cardUrl = cardUrl.concat("spades.png");
         default:
-          cardUrl = cardUrl.concat("card_back.png");
           break;
       }
     }
