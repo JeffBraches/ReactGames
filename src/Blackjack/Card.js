@@ -115,8 +115,7 @@ class Card extends Component {
           break;
       }
     }
-
-    console.log("cardurl: " + cardUrl);
+    
     this.setState({
       cardSource: cardUrl
     });
