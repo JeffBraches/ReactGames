@@ -54,6 +54,12 @@ h1 {
 .gamestartContainer{
     text-align: center;
 }
+
+.square{
+    font-size: 20px;
+    padding: 50px;
+}
+
 #hitbutton{
     background-color: rgb(70, 224, 186);
 }
@@ -72,3 +78,4 @@ h1 {
     font-size: 20px;
     background-color: #0ebe0e
 }
+

@@ -25,12 +25,25 @@ class GameContainer extends Component {
         gameState: 1,
         gameBoard,
         result: "",
+        player: "O"
       }
     );
   }
 
-  handleSelection(player, square) {
+  handleSelection(square) {
+    let gameBoard = this.state.gameBoard
+    let currentPlayer = this.state.player;
+    let nextPlayer;
+    currentPlayer === "O" ? nextPlayer = "X" : nextPlayer = "O"
 
+    if (!gameBoard[square]){
+      gameBoard[square] = this.state.player;
+
+      this.setState({
+        gameBoard,
+        player: nextPlayer
+      })
+    }
   }
 
   render() {
