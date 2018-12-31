@@ -56,11 +56,20 @@ h1 {
 }
 
 .square{
+    width: 5%;
+    padding-top:5%;
     font-size: 20px;
-    padding: 50px; 
-    margin: 10px;  
+    position: relative;
 }
 
+.squareText{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+}
 #hitbutton{
     background-color: rgb(70, 224, 186);
 }
