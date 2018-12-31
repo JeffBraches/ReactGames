@@ -17,6 +17,7 @@ class TicTacToe extends Component {
 
     this.setGameState = this.setGameState.bind(this);
     this.updateStats = this.updateStats.bind(this);
+    this.handleScoreReset = this.handleScoreReset.bind(this);
 
     if (!localStorage.tictactoeOWins) {
       localStorage.tictactoeOWins = 0;
@@ -53,6 +54,17 @@ class TicTacToe extends Component {
     }
   }
 
+  handleScoreReset() {
+    localStorage.numOWins = 0;
+    localStorage.numXWins = 0;
+    localStorage.numTies = 0;
+    this.setState({
+      numOWins: 0,
+      numXWins: 0,
+      numTies: 0
+    })
+  }
+
   render() {
     return (
       <div className="TicTacToe">
@@ -64,6 +76,7 @@ class TicTacToe extends Component {
           bValue={this.state.numXWins}
           cLabel="Ties: "
           cValue={this.state.numTies}
+          handleScoreReset = {this.handleScoreReset}
         />
         <GameContainer updateStats={this.updateStats}/>
       </div>
