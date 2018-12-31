@@ -65,7 +65,7 @@ class TicTacToe extends Component {
           cLabel="Ties: "
           cValue={this.state.numTies}
         />
-        <GameContainer />
+        <GameContainer updateStats={this.updateStats}/>
       </div>
     );
   }

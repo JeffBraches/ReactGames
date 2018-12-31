@@ -57,7 +57,8 @@ h1 {
 
 .square{
     font-size: 20px;
-    padding: 50px;
+    padding: 50px; 
+    margin: 10px;  
 }
 
 #hitbutton{

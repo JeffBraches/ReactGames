@@ -6,7 +6,7 @@ class Blackjack extends Component {
   constructor(props) {
     super(props);
 
-    if (!localStorage) {
+    if (!localStorage.blackjackWins) {
       localStorage.blackjackWins = 0;
       localStorage.blackjackLosses = 0;
       localStorage.blackjackPushes = 0;
