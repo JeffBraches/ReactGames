@@ -69,7 +69,7 @@ class Blackjack extends Component {
   render() {
     return (
       <div className="Blackjack">
-        <h1 className="title">ReactJack</h1>
+        <h1 className="appHeader">ReactJack</h1>
         <Stats
           game="Blackjack"
           aLabel="Wins: "

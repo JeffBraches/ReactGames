@@ -1,5 +1,6 @@
 {
   "name": "webdev",
+  "homepage": "https://JeffBraches.github.io/ReactGames",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,6 +24,5 @@
   ],
   "devDependencies": {
     "gh-pages": "^2.0.1"
-  },
-  "homepage": "http://JeffBraches.github.io/ReactGames"
+  }
 }

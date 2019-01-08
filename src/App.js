@@ -28,13 +28,17 @@ class App extends Component {
   render() {
     return (
       <div>
-        {this.state.game === "" ? <h1>React Games</h1> : null }
-        <div className="gameSelector">
-          <button onClick={this.blackjackSelect} className="actionButton">Blackjack</button>
-          <button onClick={this.tictactoeSelect} className="actionButton">TicTacToe</button>
-        </div>
-        <div className="gameContainer">
-        {this.state.game === "" ? <h2>Please select a game from above</h2> : null}
+        {this.state.game === "" ? 
+          <div>
+            <h1 className="appHeader">React Games</h1> 
+            <div className="gameSelectContainer">
+              {this.state.game === "" ? <h2 className="gameSelectHeader">Please select a game from below</h2> : null}
+              <button onClick={this.blackjackSelect} className="gameSelectButton">BlackJack</button>
+              <button onClick={this.tictactoeSelect} className="gameSelectButton">TicTacToe</button>
+            </div>
+          </div>
+        : null }
+        <div>
           {this.state.game === "blackjack" ? <Blackjack /> : null}
           {this.state.game === "tictactoe" ? <TicTacToe /> : null}
         </div>

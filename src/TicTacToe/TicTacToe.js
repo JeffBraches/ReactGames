@@ -68,7 +68,7 @@ class TicTacToe extends Component {
   render() {
     return (
       <div className="TicTacToe">
-        <h1 className="title">ReactTacToe</h1>
+        <h1 className="appHeader">ReactTacToe</h1>
         <Stats
           game="TicTacToe"
           aLabel="O Wins: "

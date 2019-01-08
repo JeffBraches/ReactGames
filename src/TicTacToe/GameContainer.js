@@ -118,15 +118,12 @@ class GameContainer extends Component {
   render() {
     if (this.state.gameState === 0) {
       return (
-        <div className="gamestartContainer">
           <button
-            className="actionbutton"
-            id="gamestartbutton"
+            className="gameStartButton"
             onClick={this.handleStart}
           >
             Start New Game
           </button>
-        </div>
       );
     } else if (this.state.gameState === 1) {
       return (

@@ -122,7 +122,15 @@ class Card extends Component {
     });
   }
   render() {
-    return <img className="card" src={this.state.cardSource} />;
+    
+    if (this.state.cardSource === "./cards/empty.png"){
+      return null;
+    } else{
+      return (
+        <img className="card" src={this.state.cardSource} />
+      )
+    }
+    
   }
 }
 

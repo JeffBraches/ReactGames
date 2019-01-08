@@ -114,7 +114,6 @@ class GameContainer extends Component {
 
     let dealerHandValue = this.calculateDealerHand();
     let playerHandValue = this.calculatePlayerHand();
-    console.log(playerHandValue);
 
     if (dealerHandValue < 16) {
       //One Card
@@ -192,8 +191,6 @@ class GameContainer extends Component {
       this.props.updateStats(1);
     }
     this.setState({ dealerCard2: this.state.dealerHidden, gameState: 2 });
-
-    console.log("after method");
   }
 
   handleBust() {
@@ -314,15 +311,12 @@ class GameContainer extends Component {
   render() {
     if (this.state.gameState === 0) {
       return (
-        <div className="gamestartContainer">
           <button
-            className="actionbutton"
-            id="gamestartbutton"
+            className="gameStartButton"
             onClick={this.handleStart}
           >
             Start New Game
           </button>
-        </div>
       );
     } else if (this.state.gameState === 1) {
       return (
