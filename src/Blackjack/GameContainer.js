@@ -112,16 +112,31 @@ class GameContainer extends Component {
     let newCard2Value = (newCard2 % 13) + 1;
     let newCard3Value = (newCard3 % 13) + 1;
 
+    if (newCardValue > 10){
+      newCardValue = 10;
+    }
+    if (newCard2Value > 10){
+      newCard2Value = 10;
+    }
+    if (newCard3Value > 10){
+      newCard3Value = 10;
+    }
+
     let dealerHandValue = this.calculateDealerHand();
     let playerHandValue = this.calculatePlayerHand();
 
     if (dealerHandValue < 16) {
+      console.log("Dealer hand value before hit: ", dealerHandValue)
       //One Card
       dealerHandValue += newCardValue;
+      console.log("Dealer hand value after hit: ", dealerHandValue)
       if (dealerHandValue < 16) {
         //Two Cards
+        console.log("Dealer hand value before hit cards: ", dealerHandValue)
         dealerHandValue += newCard2Value;
+        console.log("Dealer hand value after hit: ", dealerHandValue)
         if (dealerHandValue < 16) {
+          console.log("Dealer hand value with 4 cards: ", dealerHandValue)
           //Three Cards
           dealerHandValue += newCard3Value;
           this.setState({
@@ -267,10 +282,12 @@ class GameContainer extends Component {
     ];
 
     dealerHandArray.forEach(card => {
+      console.log((card%13)+1);
       let cardValue = (card % 13) + 1;
-      if (cardValue > 9) {
+      if (cardValue > 10) {
         //Face cards
         dealerHandValue += 10;
+        dealerHasFacecard = true;
       } else if (card % 13 === 0) {
         dealerHasAce = true;
         dealerHandValue += cardValue;
@@ -304,7 +321,7 @@ class GameContainer extends Component {
       });
       this.props.updateStats(0);
     }
-    this.setState({ dealerHandValue: dealerHandValue });
+    this.setState({ dealerHandValue });
     return dealerHandValue;
   }
 
