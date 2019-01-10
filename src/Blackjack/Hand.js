@@ -25,11 +25,13 @@ class Hand extends Component {
   render() {
     return (
       <div className="hand">
-        <Card card={this.state.card1}/>
-        <Card card={this.state.card2}/>
-        <Card card={this.state.card3}/>
-        <Card card={this.state.card4}/>
-        <Card card={this.state.card5}/>
+        <div className="cardContainer">
+            <Card card={this.state.card1}/>
+            <Card card={this.state.card2}/>
+            <Card card={this.state.card3}/>
+            <Card card={this.state.card4}/>
+            <Card card={this.state.card5}/>
+        </div>
       </div>
     );
   }

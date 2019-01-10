@@ -127,7 +127,7 @@ class Card extends Component {
       return null;
     } else{
       return (
-        <img className="card" src={this.state.cardSource} />
+        <img className="card" alt={this.state.cardSource.replace(/[^0-9a-z]/gi, '').slice(5,-3)} src={this.state.cardSource} />
       )
     }
     

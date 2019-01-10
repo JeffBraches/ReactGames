@@ -328,22 +328,6 @@ class GameContainer extends Component {
             card4={this.state.dealerCard4}
             card5={this.state.dealerCard5}
           />
-          <div className="actioncontainer">
-            <button
-              className="actionbutton"
-              id="hitbutton"
-              onClick={this.handleHit}
-            >
-              Hit
-            </button>
-            <button
-              className="actionbutton"
-              id="staybutton"
-              onClick={this.handleStay}
-            >
-              Stay
-            </button>
-          </div>
 
           <Hand
             card1={this.state.playerCard1}
@@ -352,7 +336,26 @@ class GameContainer extends Component {
             card4={this.state.playerCard4}
             card5={this.state.playerCard5}
           />
+
+          <div className="actionContainer">
+            <button
+              className="actionButton"
+              id="hitButton"
+              onClick={this.handleHit}
+            >
+              Hit
+            </button>
+            <button
+              className="actionButton"
+              id="stayButton"
+              onClick={this.handleStay}
+            >
+              Stay
+            </button>
+          </div>
         </div>
+
+        
       );
     } else if (this.state.gameState === 2) {
       return (
@@ -364,18 +367,6 @@ class GameContainer extends Component {
             card4={this.state.dealerCard4}
             card5={this.state.dealerCard5}
           />
-
-          <div className="gameresults">
-            <span>{this.state.result}</span>
-            <button
-              className="actionbutton"
-              id="restartbutton"
-              onClick={this.handleStart}
-            >
-              Start New Game
-            </button>
-          </div>
-
           <Hand
             card1={this.state.playerCard1}
             card2={this.state.playerCard2}
@@ -383,6 +374,16 @@ class GameContainer extends Component {
             card4={this.state.playerCard4}
             card5={this.state.playerCard5}
           />
+          <div>
+            <h3 className="gameResults">{this.state.result}</h3>
+            <button
+              className="actionButton"
+              id="restartButton"
+              onClick={this.handleStart}
+            >
+              New Game
+            </button>
+          </div>
         </div>
       );
     }

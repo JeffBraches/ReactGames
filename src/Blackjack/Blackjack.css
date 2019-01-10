@@ -1,10 +1,83 @@
 .card{
-    max-height: 9em;
+    max-height: 15em;
     border: 1px solid black;
     padding: 0.1em;
 }
 
 .hand{
-    max-height: 10em;
+    max-height: 20em;
     display: block;
+    text-align: center;
+}
+
+.actionContainer{
+    width: 100%;
+    text-align: center;
+}
+
+.actionButton{
+    font-size: 4em;
+    padding: 0.25em;
+    width: 25%;
+    margin-top: 1em;
+}
+
+.gameResults{
+    text-align: center;
+    font-size: 2em;
+    margin: 1em;
+}
+
+#hitButton{
+    background-color: rgb(0,255,0);
+}
+
+#stayButton{
+    background-color: rgb(255,0,0);
+}
+
+#hitButton:hover{
+    background-color: rgb(147, 224, 147);
+}
+#stayButton:hover{
+    background-color: rgb(218, 160, 160);
+}
+#restartButton{
+    width: 100%; 
+    margin: 0;
+}
+@media only screen and (max-width: 650px) {
+    .hand{
+        overflow: scroll;
+        width: 100%;
+        text-align: left;
+    }
+
+    .cardContainer{
+        width: 155%;
+    }
+
+    .card{
+        max-height: 9em;
+        border: 1px solid black;
+        padding: 0.1em;
+        overflow: scroll;
+    }
+    .actionButton{
+        font-size: 3em;
+        padding: 0.5em;
+        width: 50%;
+    }
+
+    .gameResults{
+        text-align: center;
+        font-size: 1.5em;
+        margin: 0.25em;
+        margin-bottom: 0;
+    }
+
+    #restartButton{
+        font-size: 3em;
+    }
+    
 }
