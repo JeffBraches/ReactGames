@@ -26,7 +26,7 @@ class GameContainer extends Component {
         gameState: 1,
         gameBoard,
         result: "",
-        player: "O"
+        player: "X"
       }
     );
   }
@@ -118,12 +118,14 @@ class GameContainer extends Component {
   render() {
     if (this.state.gameState === 0) {
       return (
+        <div className="gameContainer">
           <button
             className="gameStartButton"
             onClick={this.handleStart}
           >
             Start New Game
           </button>
+        </div>
       );
     } else if (this.state.gameState === 1) {
       return (
@@ -137,12 +139,15 @@ class GameContainer extends Component {
     } else if (this.state.gameState === 2) {
       return (
         <div className="gameContainer">
-
-          <div className="gameresults">
+          <Board 
+            gameBoard={this.state.gameBoard}
+            handleSelection={this.handleSelection}
+          />
+          <div className="gameResults">
             <span>{this.state.result}</span>
             <button
-              className="actionbutton"
-              id="restartbutton"
+              className="actionButton"
+              id="restartButton"
               onClick={this.handleStart}
             >
               Start New Game
