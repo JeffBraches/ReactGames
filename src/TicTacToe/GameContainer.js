@@ -146,7 +146,7 @@ class GameContainer extends Component {
           <div className="gameResults">
             <span>{this.state.result}</span>
             <button
-              className="actionButton"
+              className="gameStartButton"
               id="restartButton"
               onClick={this.handleStart}
             >
