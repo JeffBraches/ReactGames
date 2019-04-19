@@ -1,84 +1,83 @@
-.card{
-    max-height: 15em;
-    border: 1px solid black;
-    padding: 0.1em;
+.card {
+  max-height: 15em;
+  border: 1px solid black;
+  padding: 0.1em;
 }
 
-.hand{
-    max-height: 20em;
-    display: block;
-    text-align: center;
+.hand {
+  max-height: 20em;
+  display: block;
+  text-align: center;
 }
 
-.actionContainer{
-    width: 100%;
-    text-align: center;
+.actionContainer {
+  width: 100%;
+  text-align: center;
 }
 
-.actionButton{
-    font-size: 3em;
-    padding: 0.5em 0.25em 0.5em 0.25em;
-    width: 25%;
-    margin-top: 1em;
+.actionButton {
+  font-size: 3em;
+  padding: 0.5em 0.25em 0.5em 0.25em;
+  width: 25%;
+  margin-top: 1em;
 }
 
-.gameResults{
-    text-align: center;
-    font-size: 2em;
-    margin: 1em;
+.gameResults {
+  text-align: center;
+  font-size: 2em;
+  margin: 1em;
 }
 
-#hitButton{
-    background-color: rgb(0,255,0);
+#hitButton {
+  background-color: rgb(0, 255, 0);
 }
 
-#stayButton{
-    background-color: rgb(255,0,0);
+#stayButton {
+  background-color: rgb(255, 0, 0);
 }
 
-#hitButton:hover{
-    background-color: rgb(147, 224, 147);
+#hitButton:hover {
+  background-color: rgb(147, 224, 147);
 }
-#stayButton:hover{
-    background-color: rgb(218, 160, 160);
+#stayButton:hover {
+  background-color: rgb(218, 160, 160);
 }
-#restartButton{
-    width: 100%; 
-    margin: 0;
+#restartButton {
+  width: 100%;
+  margin: 0;
 }
 @media only screen and (max-width: 650px) {
-    .hand{
-        overflow: scroll;
-        width: 100%;
-        text-align: left;
-    }
+  .hand {
+    overflow: scroll;
+    width: 100%;
+    text-align: left;
+  }
 
-    .cardContainer{
-        width: 155%;
-    }
+  .cardContainer {
+    width: 155%;
+  }
 
-    .card{
-        max-height: 9em;
-        border: 1px solid black;
-        padding: 0.1em;
-        overflow: scroll;
-    }
-    .actionButton{
-        padding: 0.25em 0 0.25em 0;
-        width: 50%;
-        margin-top: 0;
-    }
+  .card {
+    max-height: 9em;
+    border: 1px solid black;
+    padding: 0.1em;
+    overflow: scroll;
+  }
+  .actionButton {
+    padding: 0.25em 0 0.25em 0;
+    width: 50%;
+    margin-top: 0;
+  }
 
-    .gameResults{
-        text-align: center;
-        font-size: 1em;
-        margin: 0.25em;
-        margin-bottom: 0;
-    }
+  .gameResults {
+    text-align: center;
+    font-size: 1em;
+    margin: 0.25em;
+    margin-bottom: 0;
+  }
 
-    #restartButton{
-        font-size: 3em;
-        padding: 0.5em;
-    }
-    
+  #restartButton {
+    font-size: 3em;
+    padding: 0.5em;
+  }
 }

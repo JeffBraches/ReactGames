@@ -112,13 +112,13 @@ class GameContainer extends Component {
     let newCard2Value = (newCard2 % 13) + 1;
     let newCard3Value = (newCard3 % 13) + 1;
 
-    if (newCardValue > 10){
+    if (newCardValue > 10) {
       newCardValue = 10;
     }
-    if (newCard2Value > 10){
+    if (newCard2Value > 10) {
       newCard2Value = 10;
     }
-    if (newCard3Value > 10){
+    if (newCard3Value > 10) {
       newCard3Value = 10;
     }
 
@@ -126,17 +126,17 @@ class GameContainer extends Component {
     let playerHandValue = this.calculatePlayerHand();
 
     if (dealerHandValue < 16) {
-      console.log("Dealer hand value before hit: ", dealerHandValue)
+      console.log("Dealer hand value before hit: ", dealerHandValue);
       //One Card
       dealerHandValue += newCardValue;
-      console.log("Dealer hand value after hit: ", dealerHandValue)
+      console.log("Dealer hand value after hit: ", dealerHandValue);
       if (dealerHandValue < 16) {
         //Two Cards
-        console.log("Dealer hand value before hit cards: ", dealerHandValue)
+        console.log("Dealer hand value before hit cards: ", dealerHandValue);
         dealerHandValue += newCard2Value;
-        console.log("Dealer hand value after hit: ", dealerHandValue)
+        console.log("Dealer hand value after hit: ", dealerHandValue);
         if (dealerHandValue < 16) {
-          console.log("Dealer hand value with 4 cards: ", dealerHandValue)
+          console.log("Dealer hand value with 4 cards: ", dealerHandValue);
           //Three Cards
           dealerHandValue += newCard3Value;
           this.setState({
@@ -282,7 +282,7 @@ class GameContainer extends Component {
     ];
 
     dealerHandArray.forEach(card => {
-      console.log((card%13)+1);
+      console.log((card % 13) + 1);
       let cardValue = (card % 13) + 1;
       if (cardValue > 10) {
         //Face cards
@@ -328,12 +328,9 @@ class GameContainer extends Component {
   render() {
     if (this.state.gameState === 0) {
       return (
-          <button
-            className="gameStartButton"
-            onClick={this.handleStart}
-          >
-            Start New Game
-          </button>
+        <button className="gameStartButton" onClick={this.handleStart}>
+          Start New Game
+        </button>
       );
     } else if (this.state.gameState === 1) {
       return (
@@ -371,8 +368,6 @@ class GameContainer extends Component {
             </button>
           </div>
         </div>
-
-        
       );
     } else if (this.state.gameState === 2) {
       return (

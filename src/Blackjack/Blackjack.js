@@ -44,7 +44,7 @@ class Blackjack extends Component {
       numWins: 0,
       numLosses: 0,
       numPushes: 0
-    })
+    });
   }
   //0 = loss, 1 = win, 2 = push
   updateStats(result) {
@@ -52,7 +52,8 @@ class Blackjack extends Component {
       this.setState({
         numLosses: this.state.numLosses + 1
       });
-      localStorage.blackjackLosses = parseInt(localStorage.blackjackLosses, 10) + 1;
+      localStorage.blackjackLosses =
+        parseInt(localStorage.blackjackLosses, 10) + 1;
     } else if (result === 1) {
       this.setState({
         numWins: this.state.numWins + 1
@@ -62,7 +63,8 @@ class Blackjack extends Component {
       this.setState({
         numPushes: this.state.numPushes + 1
       });
-      localStorage.blackjackPushes = parseInt(localStorage.blackjackPushes, 10) + 1;
+      localStorage.blackjackPushes =
+        parseInt(localStorage.blackjackPushes, 10) + 1;
     }
   }
 
@@ -78,7 +80,7 @@ class Blackjack extends Component {
           bValue={this.state.numLosses}
           cLabel="Pushes: "
           cValue={this.state.numPushes}
-          handleScoreReset = {this.handleScoreReset}
+          handleScoreReset={this.handleScoreReset}
         />
         <GameContainer
           setGameState={this.setGameState}

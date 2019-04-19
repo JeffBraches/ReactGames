@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import Stats from "../Stats"
-import GameContainer from "./GameContainer"
+import Stats from "../Stats";
+import GameContainer from "./GameContainer";
 import "./TicTacToe.css";
 
 class TicTacToe extends Component {
@@ -38,17 +38,19 @@ class TicTacToe extends Component {
   updateStats(result) {
     if (result === 0) {
       this.setState({
-        numOWins: this.state.numOWins+1
-      })
-      localStorage.tictactoeOWins = parseInt(localStorage.tictactoeOWins, 10) + 1;
+        numOWins: this.state.numOWins + 1
+      });
+      localStorage.tictactoeOWins =
+        parseInt(localStorage.tictactoeOWins, 10) + 1;
     } else if (result === 1) {
       this.setState({
-        numXWins: this.state.numXWins+1
+        numXWins: this.state.numXWins + 1
       });
-      localStorage.tictactoeXWins = parseInt(localStorage.tictactoeXWins, 10) + 1;
+      localStorage.tictactoeXWins =
+        parseInt(localStorage.tictactoeXWins, 10) + 1;
     } else {
       this.setState({
-        numTies: this.state.numTies+1
+        numTies: this.state.numTies + 1
       });
       localStorage.tictactoeTies = parseInt(localStorage.tictactoeTies, 10) + 1;
     }
@@ -62,7 +64,7 @@ class TicTacToe extends Component {
       numOWins: 0,
       numXWins: 0,
       numTies: 0
-    })
+    });
   }
 
   render() {
@@ -77,9 +79,9 @@ class TicTacToe extends Component {
           bValue={this.state.numXWins}
           cLabel="Ties: "
           cValue={this.state.numTies}
-          handleScoreReset = {this.handleScoreReset}
+          handleScoreReset={this.handleScoreReset}
         />
-        <GameContainer updateStats={this.updateStats}/>
+        <GameContainer updateStats={this.updateStats} />
       </div>
     );
   }

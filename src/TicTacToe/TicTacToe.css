@@ -1,49 +1,49 @@
-.gameContainer{
-    text-align: center;
+.gameContainer {
+  text-align: center;
 }
 
-.gameStartButton{
-    padding: 0.5em;
-    font-size: 3em;
-    text-align: center;
+.gameStartButton {
+  padding: 0.5em;
+  font-size: 3em;
+  text-align: center;
 }
 
-#restartButton{
-    font-size: 2em;
+#restartButton {
+  font-size: 2em;
 }
-.square{
-    height: 5em;
-    width: 5em;
-    font-size: 2em;
+.square {
+  height: 5em;
+  width: 5em;
+  font-size: 2em;
+  position: relative;
+}
+
+.squareText {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+@media only screen and (max-width: 650px) {
+  .board {
+    margin-top: 5em;
+  }
+  .square {
+    width: 3.5em;
+    height: 3.5em;
     position: relative;
-}
+  }
 
-.squareText{
+  .squareText {
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
-}
-@media only screen and (max-width: 650px) {
-    .board{
-        margin-top: 5em;
-    }
-    .square{
-        width: 3.5em;
-        height: 3.5em;
-        position: relative;
-    }
-    
-    .squareText{
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-    }
+  }
 
-    #restartButton{
-        font-size: 1em;
-    }
+  #restartButton {
+    font-size: 1em;
+  }
 }

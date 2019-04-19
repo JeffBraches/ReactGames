@@ -6,38 +6,51 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      game: ""
+      game: null
     };
 
     this.blackjackSelect = this.blackjackSelect.bind(this);
     this.tictactoeSelect = this.tictactoeSelect.bind(this);
-
   }
 
-  blackjackSelect(){
-      this.setState({
-          game: "blackjack"
-      })
+  blackjackSelect() {
+    this.setState({
+      game: "blackjack"
+    });
   }
 
-  tictactoeSelect(){
-      this.setState({
-          game: "tictactoe"
-      })
+  tictactoeSelect() {
+    this.setState({
+      game: "tictactoe"
+    });
   }
   render() {
     return (
       <div>
-        {this.state.game === "" ? 
+        {!this.state.game ? (
           <div>
-            <h1 className="appHeader">React Games</h1> 
+            <h1 className="appHeader">React Games</h1>
             <div className="gameSelectContainer">
-              {this.state.game === "" ? <h2 className="gameSelectHeader">Please select a game from below</h2> : null}
-              <button onClick={this.blackjackSelect} className="gameSelectButton">BlackJack</button>
-              <button onClick={this.tictactoeSelect} className="gameSelectButton">TicTacToe</button>
+              {!this.state.game ? (
+                <h2 className="gameSelectHeader">
+                  Please select a game from below
+                </h2>
+              ) : null}
+              <button
+                onClick={this.blackjackSelect}
+                className="gameSelectButton"
+              >
+                BlackJack
+              </button>
+              <button
+                onClick={this.tictactoeSelect}
+                className="gameSelectButton"
+              >
+                TicTacToe
+              </button>
             </div>
           </div>
-        : null }
+        ) : null}
         <div>
           {this.state.game === "blackjack" ? <Blackjack /> : null}
           {this.state.game === "tictactoe" ? <TicTacToe /> : null}
